@@ -11,19 +11,18 @@ class Pruebas {
 	CuentaBancaria cb = new CuentaBancaria();
 
 	@Test
-	void solicitarPrestamo() {
-		CuentaBancaria cb = new CuentaBancaria();
-		try {
-			cb.agregarSaldo(3000);
-			cb.agregarSaldo(500);
-			cb.retirarSaldo(1000);
-			cb.agregarSaldo(800);
-			cb.solicitarPrestamo(1000);
-			cb.obtenerPrestamo();
-		} catch (Exception e) {
-		return;
+	void test1() {
+		modificarCredito pal=new modificarCredito();
+		asserEquols(true, pal.modificarCredito("1000"));
 		}
-
-	}
+	
+	void test2() {
+		modificarCredito pal=new modificarCredito();
+		asserEquols(true, pal.modificarCredito("900"));
+		}
+	void test3() {
+		modificarCredito pal=new modificarCredito();
+		asserEquols(true, pal.modificarCredito("1000"))
+		}
 
 }
